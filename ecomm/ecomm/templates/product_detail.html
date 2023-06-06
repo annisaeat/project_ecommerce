@@ -39,14 +39,15 @@
                     <p class="lead">
                         {% if object.harga_diskon %}
                         <span class="me-1">
-                            <del>${{ object.harga }}</del>
+                            <del>Rp {{ object.harga }}</del>
                         </span>
-                        <span>${{ object.harga_diskon }}</span>
+                        <span>Rp {{ object.harga_diskon }}</span>
                         {% else %}
-                        <span>${{ object.harga }}</span>
+                        <span>Rp {{ object.harga }}</span>
                         {% endif %}
                     </p>
-
+                   
+                    <strong> <p class="fw-bold mb-1">{{ pItem.produk_item.nama_produk }}</p></strong>
                     <strong><p style="font-size: 20px;">Deskripsi</p></strong>
 
                     <p>{{ object.deskripsi }}</p>
